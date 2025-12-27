@@ -111,10 +111,3 @@ Large Language Models (LLMs) often generate:
 - ✔ Demonstrated effectiveness of **structured knowledge grounding**
 - ✔ Identified optimal retrieval sweet spot (~20 contexts)
 
-
-## Usage
-
-```bash
-git clone <repository-url>
-pip install -r requirements.txt
-python run_rag_pipeline.py
