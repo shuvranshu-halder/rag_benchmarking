@@ -63,24 +63,6 @@ Large Language Models (LLMs) often generate:
 
 ## Hallucination Analysis
 
-### Classical RAG
-| Contexts | Hallucination Score |
-|--------|--------------------|
-| 3 | 0.92 |
-| 10 | 0.74 |
-| 40 | 0.44 |
-
----
-
-### Classical RAG + Knowledge Graph
-| Contexts | Hallucination Score |
-|--------|--------------------|
-| 3 | 0.56 |
-| 10 | 0.51 |
-| 40 | 0.34 |
-
----
-
 ### Classical RAG + KG + Chunking (800 tokens)
 | Contexts | Hallucination Score |
 |--------|--------------------|
@@ -103,14 +85,6 @@ Large Language Models (LLMs) often generate:
 
 - High faithfulness indicates minimal hallucination
 - Balanced recall and correctness
-
----
-
-### Hybrid Retrieval (KG + BM25)
-
-| Chunk Size | Contexts | Context Recall | Faithfulness | Factual Correctness |
-|----------|----------|---------------|--------------|-------------------|
-| 800 | 20 | 0.42 | 0.86 | 0.76 |
 
 ---
 
@@ -137,36 +111,6 @@ Large Language Models (LLMs) often generate:
 - ✔ Demonstrated effectiveness of **structured knowledge grounding**
 - ✔ Identified optimal retrieval sweet spot (~20 contexts)
 
----
-
-## Why Hallucination Reduced Significantly
-
-1. **More Contexts** → Better grounding (up to 20 contexts)
-2. **Knowledge Graphs** → Enforced factual constraints
-3. **Chunking** → Removed irrelevant noise and overflow
-4. **Hybrid Retrieval** → Improved recall for diverse queries
-
----
-
-## Conclusion
-
-- **KG + Chunking is the most effective RAG configuration**
-- Chunking has the **highest impact** on hallucination reduction
-- Llama-3.1-8B performs strongly when properly grounded
-- Performance gains plateau beyond ~20 contexts
-
----
-
-## Future Work
-
-- Use stronger or domain-specific embedding models
-- Improve recall beyond current 55%
-- Implement **Agentic RAG** with:
-  - Iterative retrieval
-  - Self-planning
-  - Adaptive context selection
-
----
 
 ## Usage
 
